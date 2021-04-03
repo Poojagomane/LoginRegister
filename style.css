@@ -1,0 +1,400 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+section{
+    position: relative;
+    background-image: linear-gradient(200deg, silver, white);
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.circle{
+    position: absolute;
+    top:70%;
+    left:-4%;
+}
+.triangle{
+    position: absolute;
+    top:-10%;
+    right:-9%;
+}
+.card{
+    width:60%;
+    height:75%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+    z-index:3;
+}
+.part1 .switchbutton{
+    position: absolute;
+    top:5%;
+    right:5%;
+    z-index: 3;
+}
+.login-switch,.register-switch{
+    width:70px;
+    height:30px;
+    background-color:#3598dc;
+    color:white;
+    border-radius: 10px;
+    border: 0px;
+
+}
+.part1{
+    position: relative;
+    width:60%;
+    height:100%;
+    background-color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container{
+    position: relative;
+    
+    width: 80%;
+    height:90%;
+    overflow: hidden;
+}
+.moving{
+    position: absolute;
+    width:200%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   transition: 0.3s ease;
+}
+.login{
+    padding:70px 0px;
+    
+    
+    width:50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.login h2{
+    color:#3598dc;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+ 
+.username{
+    position: relative;
+    
+    width:200%;
+    height:18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.username label{
+    position:absolute;
+    left:30%;
+    pointer-events: none;
+transition: 0.4s ease;
+}
+.username input[type="text"]{
+    border:0px;
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    width:40%;
+    
+}
+
+.underline{
+    position: absolute;
+    bottom:30%;
+    width:40%;
+    height:1px;
+    transform: scale(0);
+    background-color:#3598dc;
+    transition: 0.4s ease;
+}
+.username label svg{
+    margin-right:5px;
+}
+.username input:focus + label, .username input:valid + label{
+    transform: translateY(-100%) scale(0.8) translateX(-10%);
+    color:#3598dc;
+}
+.username input:focus + label svg path, .username input:valid + label svg path{
+    fill:#3598dc;
+}
+.username input:focus ~ .underline, .username input:valid ~ .underline{
+    transform: scale(1);
+}
+
+/* for password */
+.password{
+    position: relative;
+    
+    width:200%;
+    height:18%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.password label{
+    position:absolute;
+    left:30%;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.password input[type="password"]{
+    border:0px;
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    width:40%;
+    
+}
+
+.password label svg{
+    margin-right:5px;
+}
+.password input:focus + label, .password input:valid + label{
+    transform: translateY(-100%) scale(0.8) translateX(-10%);
+    color:#3598dc;
+}
+.password input:focus + label svg path, .password input:valid + label svg path{
+    fill:#3598dc;
+}
+.password input:focus ~ .underline, .password input:focus ~ .underline{
+    transform: scale(1);
+}
+
+.loginbutton{
+    width:100px;
+    height:40px;
+    background-color: #3598dc;
+    color:white;
+    font-size: 18px;
+    border-radius: 20px;
+    border:0px;
+}
+.loginbutton:hover{
+    transform: scale(1.08);
+}
+.register{
+    width:50%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top:10px;
+}
+.register h2{
+    margin-top: 60px;
+    color:#3598dc;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    
+}
+
+.firstname{
+    position: relative;
+    
+    width:200%;
+    height:13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.firstname label{
+    position:absolute;
+    left:30%;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.firstname input[type="text"]{
+    border:0px;
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    width:40%;
+    
+}
+
+.firstname label svg{
+    margin-right:5px;
+}
+.firstname input:focus + label, .firstname input:valid + label{
+    transform: translateY(-100%) scale(0.8) translateX(-10%);
+    color:#3598dc;
+}
+.firstname input:focus + label svg path, .firstname input:valid + label svg path{
+    fill:#3598dc;
+}
+.firstname input:focus ~ .underline, .firstname input:focus ~ .underline{
+    transform: scale(1);
+}
+
+/* last name */
+
+.lastname{
+    position: relative;
+    
+    width:200%;
+    height:13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lastname label{
+    position:absolute;
+    left:30%;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.lastname input[type="text"]{
+    border:0px;
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    width:40%;
+    
+}
+
+.lastname label svg{
+    margin-right:5px;
+}
+.lastname input:focus + label, .lastname input:valid + label{
+    transform: translateY(-100%) scale(0.8) translateX(-10%);
+    color:#3598dc;
+}
+.lastname input:focus + label svg path, .lastname input:valid + label svg path{
+    fill:#3598dc;
+}
+.lastname input:focus ~ .underline, .lastname input:focus ~ .underline{
+    transform: scale(1);
+}
+
+/* username */
+
+.usernameR{
+    position: relative;
+    
+    width:200%;
+    height:13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.usernameR label{
+    position:absolute;
+    left:30%;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.usernameR input[type="text"]{
+    border:0px;
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    width:40%;
+    
+}
+
+.usernameR label svg{
+    margin-right:5px;
+}
+.usernameR input:focus + label, .usernameR input:valid + label{
+    transform: translateY(-100%) scale(0.8) translateX(-10%);
+    color:#3598dc;
+}
+.usernameR input:focus + label svg path, .usernameR input:valid + label svg path{
+    fill:#3598dc;
+}
+.usernameR input:focus ~ .underline, .usernameR input:focus ~ .underline{
+    transform: scale(1);
+}
+
+/*password */
+
+
+.passwordR{
+    position: relative;
+    
+    width:200%;
+    height:13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.passwordR label{
+    position:absolute;
+    left:30%;
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.passwordR input[type="password"]{
+    border:0px;
+    background-color: transparent;
+    border-bottom: 1px solid #333;
+    width:40%;
+    
+}
+
+.passwordR label svg{
+    margin-right:5px;
+}
+.passwordR input:focus + label, .passwordR input:valid + label{
+    transform: translateY(-100%) scale(0.8) translateX(-10%);
+    color:#3598dc;
+}
+.passwordR input:focus + label svg path, .passwordR input:valid + label svg path{
+    fill:#3598dc;
+}
+.passwordR input:focus ~ .underline, .passwordR input:focus ~ .underline{
+    transform: scale(1);
+}
+.registerbutton{
+    margin-bottom: 20px;
+    width:100px;
+    height:40px;
+    background-color: #3598dc;
+    color:white;
+    font-size: 18px;
+    border-radius: 20px;
+    border:0px;
+
+}
+
+.registerbutton:hover{
+    transform: scale(1.08);
+}
+
+
+
+.info{
+    width:40%;
+    height:100%;
+    background-image:linear-gradient(200deg, #020432, #061094);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+}
